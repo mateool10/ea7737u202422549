@@ -2,6 +2,7 @@ import {Reservation} from '../domain/model/reservation.entity';
 import {ReservationResource, ReservationsResponse} from './reservations-response';
 import {ReservationRequest} from './reservation-request';
 
+
 export class ReservationAssembler {
   toEntityFromResource(resource: ReservationResource): Reservation {
     return new Reservation(resource.id, resource.sportsCenterId, resource.activityType, resource.participantName,
