@@ -15,3 +15,4 @@ import {LanguageSwitcher} from '../language-switcher/language-switcher';
   styleUrl: './layout.css'
 })
 export class Layout {}
+
