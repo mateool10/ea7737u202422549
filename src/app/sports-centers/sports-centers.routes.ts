@@ -5,3 +5,4 @@ const reservationForm = () => import('./presentation/views/reservation-form/rese
 export const sportsCentersRoutes: Routes = [
   {path: 'new', loadComponent: reservationForm, title: 'UrbanFit - New Reservation'}
 ];
+
