@@ -45,6 +45,7 @@ export class ReservationForm {
     this.weatherStore.clear();
     this.form.controls.activityType.valueChanges.subscribe(activityType => {
       this.selectedActivity.set(activityType);
+      this.errorMessage.set('');
       const sportsCenter = this.store.getSportsCenterByActivityType(activityType);
       if (sportsCenter) {
         this.weatherStore.loadCurrentWeather(sportsCenter.latitude, sportsCenter.longitude);
