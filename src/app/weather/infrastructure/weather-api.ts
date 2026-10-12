@@ -17,3 +17,4 @@ export class WeatherApi {
     return this.weatherEndpoint.getCurrentWeather({latitude, longitude});
   }
 }
+
