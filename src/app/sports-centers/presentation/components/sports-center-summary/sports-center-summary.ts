@@ -18,3 +18,4 @@ export class SportsCenterSummary {
   totalParticipants = computed(() => this.store.getTotalParticipants(this.sportsCenter().id));
   availableCapacity = computed(() => this.store.getAvailableCapacity(this.sportsCenter()));
 }
+
