@@ -18,3 +18,4 @@ export class PageNotFound {
     this.router.navigate(['/home']);
   }
 }
+
