@@ -10,3 +10,4 @@ export interface WeatherResponse {
   current_units: { time: string; interval: string; temperature_2m: string };
   current: CurrentWeatherResource;
 }
+
