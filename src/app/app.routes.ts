@@ -10,3 +10,4 @@ export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', loadComponent: pageNotFound, title: 'UrbanFit - Page Not Found'}
 ];
+
