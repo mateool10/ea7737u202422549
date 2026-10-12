@@ -6,3 +6,4 @@ export const environment = {
   weatherProviderApiBaseUrl: 'https://api.open-meteo.com/v1',
   weatherProviderForecastEndpointPath: '/forecast'
 };
+
