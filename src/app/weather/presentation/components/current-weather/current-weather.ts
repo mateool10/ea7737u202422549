@@ -11,3 +11,4 @@ import {WeatherStore} from '../../../application/weather.store';
 export class CurrentWeather {
   protected readonly store = inject(WeatherStore);
 }
+
