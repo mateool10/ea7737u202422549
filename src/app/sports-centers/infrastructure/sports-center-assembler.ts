@@ -11,3 +11,4 @@ export class SportsCenterAssembler {
     return response.map(resource => this.toEntityFromResource(resource));
   }
 }
+
