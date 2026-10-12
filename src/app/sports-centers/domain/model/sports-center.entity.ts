@@ -12,3 +12,4 @@ export class SportsCenter {
     public longitude: number
   ) {}
 }
+
