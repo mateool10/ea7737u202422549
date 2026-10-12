@@ -18,3 +18,4 @@ export class WeatherApiEndpoint {
       .pipe(map(response => this.assembler.toEntityFromResponse(response)));
   }
 }
+
