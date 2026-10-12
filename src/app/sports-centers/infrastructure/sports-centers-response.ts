@@ -8,3 +8,4 @@ export interface SportsCenterResource {
 }
 
 export type SportsCentersResponse = SportsCenterResource[];
+
