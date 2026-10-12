@@ -13,10 +13,11 @@ Repository: https://github.com/mateool10/ea7737u202422549
 - English and Spanish.
 
 ## Stack
-Angular 22, Angular Material, ngx-translate, json-server 0.17.4, Open-Meteo API.
+Angular 22, Angular Material, json-server 0.17.4.
 
 ## Configuration
 1. npm install
 2. cd server and run json-server --watch db.json
 3. In another terminal run ng serve
 4. Open http://localhost:4200/home
+
