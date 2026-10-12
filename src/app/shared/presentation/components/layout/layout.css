@@ -40,3 +40,13 @@
 .content main {
   padding: 24px;
 }
+
+@media (max-width: 700px) {
+  .logo + .title {
+    font-size: 0.9rem;
+  }
+
+  .content main {
+    padding: 12px;
+  }
+}
