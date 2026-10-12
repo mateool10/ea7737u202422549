@@ -16,3 +16,4 @@ export class SportsCentersApiEndpoint {
       .pipe(map(response => this.assembler.toEntitiesFromResponse(response)));
   }
 }
+
