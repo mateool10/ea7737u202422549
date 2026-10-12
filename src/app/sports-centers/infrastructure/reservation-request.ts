@@ -6,3 +6,4 @@ export interface ReservationRequest {
   weatherTemperature: number;
   reservedAt: string;
 }
+
