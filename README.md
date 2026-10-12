@@ -1,45 +1,22 @@
-# UrbanFit Sports Center Management Platform (ea7737u202422549)
+# UrbanFit Sports Center Management Platform
 
 ## Overview
-Web application for UrbanFit Sports Centers to manage reservations, check the current weather of each sports center and follow the occupancy of its facilities.
+Web application to manage reservations and capacity of the UrbanFit sports centers.
 
 ## Authorship
-- Author: Jorge Mateo León Naupari
-- Student code: u202422549
-- Repository: https://github.com/mateool10/ea7737u202422549
+Jorge Mateo León Naupari - u202422549
+Repository: https://github.com/mateool10/ea7737u202422549
 
 ## Features
-- Toolbar with the UrbanFit logo, the application title and EN / ES language buttons.
-- Sidenav with Home and New Reservation options.
-- Home view with the My Sports Centers section, showing the reservations, Total Participants and Available Capacity of each center.
-- New Reservation form with activity type, participant name and participants, using the current temperature from Open-Meteo.
-- Capacity validation before creating a reservation.
-- Page not found view for unsupported routes.
-- English and Spanish translations.
+- Home with the sports centers and their reservations.
+- New reservation form with the current temperature.
+- English and Spanish.
 
 ## Stack
-- Angular 22.2.2
-- Angular Material
-- TypeScript
-- Angular Signals
-- NGX-Translate
-- json-server 0.17.4
-- Open-Meteo Weather API
+Angular 22, Angular Material, ngx-translate, json-server 0.17.4, Open-Meteo API.
 
 ## Configuration
-1. Install the dependencies:
-   ```bash
-   npm install
-   ```
-2. Start the fake API:
-   ```bash
-   cd server
-   json-server --watch db.json
-   ```
-3. In another terminal, start the application:
-   ```bash
-   ng serve
-   ```
-4. Open `http://localhost:4200/home`.
-
-The API URLs are configured in `src/environments/environment.development.ts` and `src/environments/environment.ts`.
+1. npm install
+2. cd server and run json-server --watch db.json
+3. In another terminal run ng serve
+4. Open http://localhost:4200/home
