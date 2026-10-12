@@ -1,5 +1,5 @@
 /**
- * Reservation of participants in a sports center.
+ * Reservation entity.
  * @author Jorge Mateo León Naupari
  */
 export class Reservation {

@@ -7,7 +7,7 @@ import {SportsCentersApiEndpoint} from './sports-centers-api-endpoint';
 import {ReservationsApiEndpoint} from './reservations-api-endpoint';
 
 /**
- * Api of the sports-centers bounded context.
+ * Api for sports centers and reservations.
  * @author Jorge Mateo León Naupari
  */
 @Service()

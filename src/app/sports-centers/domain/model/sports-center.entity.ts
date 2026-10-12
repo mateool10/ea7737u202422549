@@ -1,5 +1,5 @@
 /**
- * Sports center of the UrbanFit network.
+ * Sports center entity.
  * @author Jorge Mateo León Naupari
  */
 export class SportsCenter {

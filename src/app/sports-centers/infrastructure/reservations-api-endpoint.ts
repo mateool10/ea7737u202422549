@@ -5,10 +5,6 @@ import {Reservation} from '../domain/model/reservation.entity';
 import {ReservationAssembler} from './reservation-assembler';
 import {ReservationResource, ReservationsResponse} from './reservations-response';
 
-/**
- * Endpoint for the reservations resource.
- * @author Jorge Mateo León Naupari
- */
 export class ReservationsApiEndpoint {
   private endpointUrl = `${environment.platformProviderApiBaseUrl}${environment.platformProviderReservationsEndpointPath}`;
   private assembler = new ReservationAssembler();

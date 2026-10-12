@@ -5,10 +5,6 @@ import {SportsCenter} from '../domain/model/sports-center.entity';
 import {SportsCenterAssembler} from './sports-center-assembler';
 import {SportsCentersResponse} from './sports-centers-response';
 
-/**
- * Endpoint for the sports-centers resource.
- * @author Jorge Mateo León Naupari
- */
 export class SportsCentersApiEndpoint {
   private endpointUrl = `${environment.platformProviderApiBaseUrl}${environment.platformProviderSportsCentersEndpointPath}`;
   private assembler = new SportsCenterAssembler();

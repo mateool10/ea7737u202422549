@@ -1,11 +1,11 @@
 import {inject, Service, signal} from '@angular/core';
-import {Observable, switchMap, tap, throwError} from 'rxjs';
+import {Observable, tap} from 'rxjs';
 import {SportsCenter} from '../domain/model/sports-center.entity';
 import {Reservation} from '../domain/model/reservation.entity';
 import {SportsCentersApi} from '../infrastructure/sports-centers-api';
 
 /**
- * Store with the sports centers and their reservations.
+ * Store for the sports centers and their reservations.
  * @author Jorge Mateo León Naupari
  */
 @Service()
@@ -47,24 +47,10 @@ export class SportsCentersStore {
     return sportsCenter.capacity - this.getTotalParticipants(sportsCenter.id);
   }
 
-  /**
-   * Creates a reservation after reloading the reservations and checking the available capacity.
-   * @param reservation - Reservation to create.
-   */
+  // TODO: re-check reservations and available capacity before the POST
   createReservation(reservation: Reservation): Observable<Reservation> {
-    return this.api.getReservations().pipe(
-      tap(reservations => this.reservationsSignal.set(reservations)),
-      switchMap(() => {
-        const sportsCenter = this.sportsCenters().find(center => center.id === reservation.sportsCenterId);
-        if (!sportsCenter || reservation.participants <= 0 || reservation.participants > this.getAvailableCapacity(sportsCenter)) {
-          return throwError(() => new Error('capacity-error'));
-        }
-        return this.api.createReservation(reservation);
-      }),
-      tap(created => {
-        console.log('reservation created', created);
-        this.reservationsSignal.update(reservations => [...reservations, created]);
-      })
+    return this.api.createReservation(reservation).pipe(
+      tap(created => this.reservationsSignal.update(reservations => [...reservations, created]))
     );
   }
 }

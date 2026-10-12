@@ -5,7 +5,7 @@ import {Weather} from '../domain/model/weather.entity';
 import {WeatherApiEndpoint} from './weather-api-endpoint';
 
 /**
- * Api of the weather bounded context.
+ * Api for the Open-Meteo weather service.
  * @author Jorge Mateo León Naupari
  */
 @Service()

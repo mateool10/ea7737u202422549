@@ -1,5 +1,5 @@
 /**
- * Current weather of a location.
+ * Weather entity.
  * @author Jorge Mateo León Naupari
  */
 export class Weather {

@@ -1,24 +1,5 @@
-.subtitle {
-  font-weight: normal;
-  color: var(--mat-sys-on-surface-variant);
-}
-
-.form-card {
-  max-width: 560px;
-}
-
 form {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding-top: 8px;
-}
-
-.actions {
-  display: flex;
-  gap: 12px;
-}
-
-.error {
-  color: var(--mat-sys-error);
+  max-width: 400px;
 }

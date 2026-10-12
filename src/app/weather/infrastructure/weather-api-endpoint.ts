@@ -6,20 +6,12 @@ import {WeatherAssembler} from './weather-assembler';
 import {WeatherRequest} from './weather-request';
 import {WeatherResponse} from './weather-response';
 
-/**
- * Endpoint for the Open-Meteo forecast resource.
- * @author Jorge Mateo León Naupari
- */
 export class WeatherApiEndpoint {
   private endpointUrl = `${environment.weatherProviderApiBaseUrl}${environment.weatherProviderForecastEndpointPath}`;
   private assembler = new WeatherAssembler();
 
   constructor(private http: HttpClient) {}
 
-  /**
-   * Gets the current temperature of a location.
-   * @param request - Coordinates of the location.
-   */
   getCurrentWeather(request: WeatherRequest): Observable<Weather> {
     const params = {latitude: request.latitude, longitude: request.longitude, current: 'temperature_2m'};
     return this.http.get<WeatherResponse>(this.endpointUrl, {params})

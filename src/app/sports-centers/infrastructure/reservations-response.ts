@@ -1,7 +1,3 @@
-/**
- * Reservation resource returned by the fake API.
- * @author Jorge Mateo León Naupari
- */
 export interface ReservationResource {
   id: number;
   sportsCenterId: number;
@@ -12,8 +8,4 @@ export interface ReservationResource {
   reservedAt: string;
 }
 
-/**
- * Response of the reservations endpoint.
- * @author Jorge Mateo León Naupari
- */
 export type ReservationsResponse = ReservationResource[];
