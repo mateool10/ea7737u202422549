@@ -1,0 +1,22 @@
+<mat-toolbar class="toolbar" role="banner">
+  <button mat-button class="menu-button" (click)="sidenav.toggle()" [attr.aria-label]="'menu' | translate">☰</button>
+  <img src="assets/urbanfit-logo.svg" [alt]="'app-logo' | translate" class="logo">
+  <span class="title">{{ 'app-title' | translate }}</span>
+  <span class="spacer"></span>
+  <app-language-switcher/>
+</mat-toolbar>
+
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav mode="side" opened class="sidenav">
+    <mat-nav-list aria-label="Main navigation">
+      @for (option of options; track option.link) {
+        <a mat-list-item [routerLink]="option.link" routerLinkActive="active">{{ option.label | translate }}</a>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <main>
+      <router-outlet/>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
