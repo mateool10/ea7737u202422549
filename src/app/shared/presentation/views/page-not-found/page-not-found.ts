@@ -3,10 +3,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {TranslatePipe} from '@ngx-translate/core';
 
-/**
- * View shown when the route does not exist.
- * @author Jorge Mateo León Naupari
- */
 @Component({
   selector: 'app-page-not-found',
   imports: [MatButtonModule, TranslatePipe],

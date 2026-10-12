@@ -1,21 +1,20 @@
-<mat-toolbar class="toolbar" role="banner">
-  <button mat-button class="menu-button" (click)="sidenav.toggle()" [attr.aria-label]="'menu' | translate">☰</button>
-  <img src="assets/urbanfit-logo.svg" [alt]="'app-logo' | translate" class="logo">
-  <span class="title">{{ 'app-title' | translate }}</span>
+<mat-toolbar color="primary">
+  <button mat-button (click)="sidenav.toggle()" [attr.aria-label]="'menu' | translate">Menu</button>
+  <img src="assets/urbanfit-logo.svg" [alt]="'app-logo' | translate" width="40" height="40">
+  <span>{{ 'app-title' | translate }}</span>
   <span class="spacer"></span>
   <app-language-switcher/>
 </mat-toolbar>
 
 <mat-sidenav-container class="container">
-  <mat-sidenav #sidenav [mode]="isMobile() ? 'over' : 'side'" [opened]="!isMobile()" class="sidenav">
+  <mat-sidenav #sidenav mode="side" opened>
     <mat-nav-list aria-label="Main navigation">
-      @for (option of options; track option.link) {
-        <a mat-list-item [routerLink]="option.link" routerLinkActive="active">{{ option.label | translate }}</a>
-      }
+      <a mat-list-item routerLink="/home">{{ 'home' | translate }}</a>
+      <a mat-list-item routerLink="/reservations/new">{{ 'new-reservation' | translate }}</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content class="content">
-    <main>
+  <mat-sidenav-content>
+    <main class="content">
       <router-outlet/>
     </main>
   </mat-sidenav-content>

@@ -1,13 +1,11 @@
 <h1>{{ 'home' | translate }}</h1>
-<p class="intro">{{ 'home-content' | translate }}</p>
+<p>{{ 'home-content' | translate }}</p>
 
-<section aria-labelledby="sports-centers-title">
-  <h2 id="sports-centers-title">{{ 'my-sports-centers' | translate }}</h2>
-  <mat-grid-list [cols]="cols()" rowHeight="320px" gutterSize="16px">
-    @for (sportsCenter of store.sportsCenters(); track sportsCenter.id) {
-      <mat-grid-tile>
-        <app-sports-center-summary [sportsCenter]="sportsCenter"/>
-      </mat-grid-tile>
-    }
-  </mat-grid-list>
-</section>
+<h2>{{ 'my-sports-centers' | translate }}</h2>
+<mat-grid-list cols="2" rowHeight="300px" gutterSize="16px">
+  @for (sportsCenter of store.sportsCenters(); track sportsCenter.id) {
+    <mat-grid-tile>
+      <app-sports-center-summary [sportsCenter]="sportsCenter"/>
+    </mat-grid-tile>
+  }
+</mat-grid-list>

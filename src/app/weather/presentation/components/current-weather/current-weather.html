@@ -1,12 +1,3 @@
-@if (store.loading()) {
-  <p>{{ 'loading-temperature' | translate }}</p>
-  <mat-progress-bar mode="indeterminate" aria-label="Loading temperature"/>
-}
 @if (store.weather(); as weather) {
-  <p class="temperature" aria-live="polite">
-    {{ 'current-temperature' | translate }}: <strong>{{ weather.temperature }} {{ weather.temperatureUnit }}</strong>
-  </p>
-}
-@if (store.error()) {
-  <p class="error" role="alert">{{ 'weather-error' | translate }}</p>
+  <p>{{ 'current-temperature' | translate }}: {{ weather.temperature }} {{ weather.temperatureUnit }}</p>
 }
