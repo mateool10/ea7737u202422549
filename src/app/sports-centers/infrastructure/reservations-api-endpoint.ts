@@ -22,3 +22,4 @@ export class ReservationsApiEndpoint {
       .pipe(map(resource => this.assembler.toEntityFromResource(resource)));
   }
 }
+
