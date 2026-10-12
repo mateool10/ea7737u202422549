@@ -1,0 +1,47 @@
+<h1>{{ 'new-reservation' | translate }}</h1>
+<h2 class="subtitle">{{ 'new-reservation-subtitle' | translate }}</h2>
+
+<mat-card class="form-card" appearance="outlined">
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onCreate()" aria-label="New reservation form">
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'activity-type' | translate }}</mat-label>
+        <mat-select formControlName="activityType" aria-label="Activity type">
+          @for (activity of activityTypes; track activity) {
+            <mat-option [value]="activity">{{ 'activity.' + activity | translate }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      @if (selectedSportsCenter(); as sportsCenter) {
+        <p>{{ sportsCenter.name }} - {{ 'available-capacity' | translate }}: <b>{{ store.getAvailableCapacity(sportsCenter) }}</b></p>
+        <app-current-weather/>
+      }
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'participant-name' | translate }}</mat-label>
+        <input matInput formControlName="participantName" aria-label="Participant name">
+        @if (form.controls.participantName.invalid) {
+          <mat-error>{{ 'participant-name-required' | translate }}</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'participants-number' | translate }}</mat-label>
+        <input matInput type="number" min="1" formControlName="participants" aria-label="Participants">
+        @if (form.controls.participants.invalid) {
+          <mat-error>{{ 'participants-min' | translate }}</mat-error>
+        }
+      </mat-form-field>
+
+      @if (errorMessage()) {
+        <p class="error" role="alert">{{ errorMessage() | translate }}</p>
+      }
+
+      <div class="actions">
+        <button mat-flat-button type="submit" [disabled]="!canCreate()">{{ 'create' | translate }}</button>
+        <button mat-stroked-button type="button" (click)="onCancel()">{{ 'cancel' | translate }}</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
