@@ -1,6 +1,7 @@
 {
   "name": "ea7737u202422549",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Jorge Mateo León Naupari",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
