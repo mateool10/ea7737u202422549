@@ -1,0 +1,8 @@
+.temperature {
+  font-size: 1.1rem;
+  color: var(--mat-sys-tertiary);
+}
+
+.error {
+  color: var(--mat-sys-error);
+}
