@@ -15,3 +15,4 @@ export class LanguageSwitcher {
     this.translate.use(language);
   }
 }
+
