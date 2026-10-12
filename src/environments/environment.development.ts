@@ -1,1 +1,8 @@
-export const environment = {};
+export const environment = {
+  production: false,
+  platformProviderApiBaseUrl: 'http://localhost:3000',
+  platformProviderSportsCentersEndpointPath: '/sports-centers',
+  platformProviderReservationsEndpointPath: '/reservations',
+  weatherProviderApiBaseUrl: 'https://api.open-meteo.com/v1',
+  weatherProviderForecastEndpointPath: '/forecast'
+};
