@@ -45,7 +45,6 @@ export class ReservationForm {
     });
   }
 
-  // TODO: check reservations again before the post
   onCreate(): void {
     const value = this.form.getRawValue();
     const sportsCenter = this.store.getSportsCenterByActivityType(value.activityType);
