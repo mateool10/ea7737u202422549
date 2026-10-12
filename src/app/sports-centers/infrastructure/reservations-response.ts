@@ -9,3 +9,4 @@ export interface ReservationResource {
 }
 
 export type ReservationsResponse = ReservationResource[];
+
