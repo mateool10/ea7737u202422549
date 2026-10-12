@@ -18,3 +18,4 @@ export class WeatherStore {
     this.weatherApi.getCurrentWeather(latitude, longitude).subscribe(weather => this.weatherSignal.set(weather));
   }
 }
+
