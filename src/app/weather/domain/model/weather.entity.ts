@@ -11,3 +11,4 @@ export class Weather {
     public measuredAt: string
   ) {}
 }
+
